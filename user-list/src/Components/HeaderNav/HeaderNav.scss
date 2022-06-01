@@ -1,0 +1,23 @@
+.headerNav {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title {
+    font-weight: 400;
+    color: $btn-orange;
+    font-size: 1rem;
+    cursor: pointer;
+    .logo-blue {
+      background-color: $d-grey;
+      color: white;
+      padding: 0.65rem 1rem;
+      border-radius: 5px;
+      margin-right: 1rem;
+    }
+  }
+
+  button.addUser {
+    @include outline-btn;
+  }
+}

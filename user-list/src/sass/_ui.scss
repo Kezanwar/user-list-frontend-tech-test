@@ -1,0 +1,22 @@
+@mixin outline-btn {
+  all: unset;
+  @include container-styles;
+  color: $btn-orange;
+  border: 1px solid;
+
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 200ms ease;
+
+  i {
+    margin-left: 0.3rem;
+  }
+
+  @include if-hover {
+    &:hover {
+      color: $d-grey;
+    }
+  }
+}

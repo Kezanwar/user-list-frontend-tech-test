@@ -1,0 +1,72 @@
+.userProfile {
+  .userTitleContainer {
+    display: flex;
+    margin-bottom: 4rem;
+    .user-img {
+      max-height: 6rem;
+      margin-right: 1rem;
+    }
+
+    .nameContainer {
+      .name {
+        button.offBoard {
+          @include outline-btn;
+          margin-left: 1rem;
+          font-size: 0.8rem;
+          padding: 0.2rem 0.7rem;
+          font-weight: 400;
+        }
+      }
+
+      .name,
+      .job-title {
+        margin-bottom: 0.25rem;
+      }
+
+      .job-title,
+      .country {
+        color: $m-grey;
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .userDetailContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $l-grey;
+    width: max-content;
+    min-width: 40%;
+    @include for-sml-tablet {
+      min-width: 95%;
+    }
+
+    i {
+      font-size: 1.4rem;
+      margin-right: 1rem;
+      // color: rgb(155, 155, 155);
+    }
+
+    .detail {
+      color: $m-grey;
+      font-weight: 500;
+    }
+
+    .cta {
+      @include outline-btn;
+
+      margin-left: 1rem;
+      font-size: 0.8rem;
+      padding: 0.35rem 0.7rem;
+
+      i {
+        margin-right: 0;
+        font-size: inherit;
+      }
+    }
+  }
+}

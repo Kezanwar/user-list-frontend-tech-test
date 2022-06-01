@@ -1,0 +1,36 @@
+.newUserContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include for-sml-tablet {
+    align-items: flex-start;
+  }
+  .title {
+    letter-spacing: -1px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  form {
+    min-width: 50%;
+    @include for-sml-tablet {
+      width: 100%;
+    }
+    .input-wrapper {
+      margin-bottom: 1rem;
+
+      i {
+        min-width: 1.5rem;
+      }
+    }
+
+    button.submit {
+      @include outline-btn;
+      display: block;
+      margin-left: auto;
+      margin-top: 2rem;
+      //   align-self: flex-end;
+    }
+  }
+}

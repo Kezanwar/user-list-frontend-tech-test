@@ -1,0 +1,69 @@
+.input-wrapper {
+  @include container-styles;
+  display: flex;
+  align-items: center;
+
+  transition: border 150ms ease;
+
+  i {
+    color: $m-grey;
+    transition: color 140ms ease;
+    margin-left: 0.6rem;
+    font-size: 1rem;
+
+    @include for-sml-tablet {
+      min-width: 1.5rem;
+    }
+  }
+
+  &:focus-within {
+    border: solid 1px $d-grey;
+    i {
+      color: $d-grey;
+    }
+  }
+
+  @include if-hover {
+    &:hover {
+      border: solid 1px $d-grey;
+      i {
+        color: $d-grey;
+      }
+    }
+  }
+
+  input,
+  select {
+    all: unset;
+    padding: 0.6rem 0.6rem;
+    font-size: 0.9rem;
+    color: $d-grey;
+    font-weight: 500;
+    flex: 1;
+
+    @include for-sml-tablet {
+      font-size: 0.8rem;
+    }
+
+    &::placeholder {
+      color: $m-grey;
+      transition: opacity 300ms ease;
+    }
+
+    &.noSelection {
+      color: $m-grey;
+    }
+
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+    @include if-hover {
+      &:hover::placeholder {
+        color: $d-grey;
+      }
+    }
+  }
+}

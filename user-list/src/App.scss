@@ -1,0 +1,35 @@
+@import './sass/variables';
+@import './sass/mixins';
+@import './sass/ui.scss';
+
+// INITIALIZATIONS
+
+h1,
+h2,
+h3,
+h4,
+div {
+  color: $d-grey;
+}
+
+a {
+  text-decoration: none;
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.app {
+  // text-align: center;
+  padding: 3rem 6rem;
+  @include for-lg-tablet {
+    padding: 1rem 1rem;
+  }
+}
+
+@import './Components/UserList/UserList.scss';
+@import './Components/UI/InputWrapper/InputWrapper.scss';
+@import './Components/Alert/Alerts.scss';
+@import './Components/HeaderNav/HeaderNav.scss';
+@import './Components/Routes/NewUser/NewUser.scss';
+@import './Components/Routes/UserProfile/UserProfile.scss';

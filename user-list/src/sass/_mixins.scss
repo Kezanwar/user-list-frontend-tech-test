@@ -1,0 +1,76 @@
+@mixin for-sml-phone {
+  @media (max-width: $breakpoint-phone-sml) {
+    @content;
+  }
+}
+@mixin for-lg-phone {
+  @media (max-width: $breakpoint-phone-lg) {
+    @content;
+  }
+}
+@mixin for-sml-tablet {
+  @media (max-width: $breakpoint-tablet-sml) {
+    @content;
+  }
+}
+@mixin for-lg-tablet {
+  @media (max-width: $breakpoint-tablet-lg) {
+    @content;
+  }
+}
+@mixin for-sml-desktop {
+  @media (max-width: $breakpoint-desktop-sml) {
+    @content;
+  }
+}
+@mixin for-lg-desktop {
+  @media (min-width: $breakpoint-desktop-lg) {
+    @content;
+  }
+}
+
+@mixin grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 1fr 1fr;
+  grid-template-rows: auto;
+
+  @include for-sml-tablet {
+    grid-template-columns: 1fr 1.6fr 1fr 1fr;
+  }
+  @include for-lg-phone {
+    grid-template-columns: 1.5fr 2.6fr 1fr;
+  }
+}
+
+@mixin flex-cell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin container-styles {
+  box-shadow: 0px 0px 12px 2px rgba(191, 191, 191, 0.156);
+  border: 1px solid $l-grey;
+  border-radius: 5px;
+}
+
+@mixin if-hover {
+  @media (hover: hover) {
+    /* when hovers supported supported */
+    @content;
+  }
+}
+
+@mixin fadeIn($duration) {
+  animation: fadeIn $duration ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
